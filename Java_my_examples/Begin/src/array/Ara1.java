@@ -12,9 +12,6 @@ public class Ara1 {
         array2[0] = 30;
         array2[1] = 50;
 
-        //array1[1] = array2;
-        //array1[1][0] = array2[0];
-        //array1[1][1] = array2[1];
         int a = array2[0];
         int b = array2[1];
         array1[1][0] = a;
