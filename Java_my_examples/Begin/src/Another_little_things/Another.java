@@ -27,13 +27,13 @@ public class Another implements i1, i2 {
         System.out.println(c1.equals(a1));
 
 
-//        ((i1)a1).abc();
-//        int a = 10;
-//        int b = 20;
-//        int c=0;
-//        System.out.println(a<b? "А меньше Б":"Б меньше А");
-//        c = (a>b? 100:200);
-//        System.out.println(c);
+        ((i1)a1).abc();
+        int a = 10;
+        int b = 20;
+        int c=0;
+        System.out.println(a<b? "А меньше Б":"Б меньше А");
+        c = (a>b? 100:200);
+        System.out.println(c);
 
     }
 
@@ -54,15 +54,10 @@ class Car {
 
     @Override
     public boolean equals(Object o) {
-        //boolean res=false;
+
         if (o instanceof Car) {
-            if ((this.color.equals(((Car) o).color)) && (this.engine.equals(((Car) o).engine))) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
+            if ((this.color.equals(((Car) o).color)) && (this.engine.equals(((Car) o).engine))) return true;
         }
+        return false;
     }
 }
