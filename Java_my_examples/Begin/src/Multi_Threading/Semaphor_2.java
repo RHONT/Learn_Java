@@ -6,7 +6,7 @@ public class Semaphor_2 {
     static int cheese_head =30;
 
     public static void main(String[] args) {
-        Semaphore sm=new Semaphore(1);
+        Semaphore sm=new Semaphore(2);
         new Rat("Серая",4,sm);
         new Rat("Белая",2,sm);
         new Rat("Плешивая",2,sm);
