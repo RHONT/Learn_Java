@@ -8,11 +8,15 @@ public class Test_Number {
         char ch = 55;
         c.abc(ch);
         c.abc(false);
-        c.abc(3.14);
+        c.abc(3.14f);   // если уберу f, то примет Object
         c.plusstr("*");
         c.plusstr("*");
         c.plusstr("*");
     }
+
+    void abc(char a) {
+        System.out.println("Char");
+    }  // если это убрать, то int возьмет на себя char
 
     void abc(short a) {
         System.out.println("Byte");
