@@ -5,6 +5,9 @@ import java.util.concurrent.CountDownLatch;
 //Просиходит терраформация земли. И только спустя пять операций начинают добавляться животные.
 
 public class Count_Down_Latch {
+
+    static CountDownLatch cdl=new CountDownLatch(5);
+
     public static void main(String[] args) throws InterruptedException {
         Animal a1=new Animal("Гусеница",cdl);
         new Animal("Белка",cdl);
@@ -23,7 +26,7 @@ public class Count_Down_Latch {
 
     }
 
-    static CountDownLatch cdl=new CountDownLatch(5);
+
 
     private static void create_planet() throws InterruptedException {
 
