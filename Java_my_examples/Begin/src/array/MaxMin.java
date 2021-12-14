@@ -6,11 +6,13 @@ public class MaxMin {
 
     static void minmaxfun(int arr[]) {
         System.out.println("Старое значение массива: ");
-        for (int i = 0; i < arr.length; i++) System.out.print(arr[i] + " ");
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
+       // Arrays.stream(arr).forEach(e->System.out.print(e+" " ));  // лямбда подход
+       // for (int i = 0; i < arr.length; i++) System.out.print(arr[i] + " ");  // старый подход
         Arrays.sort(arr);
         System.out.println("Новое значение массива: ");
-        for (int i = 0; i < arr.length; i++) System.out.print(arr[i] + " ");
+        System.out.println(Arrays.toString(arr));
+        //for (int i = 0; i < arr.length; i++) System.out.print(arr[i] + " ");  // единственное тут скобок нет
     }
 
     static void ShowArray(String arr[][]) {
@@ -25,7 +27,6 @@ public class MaxMin {
                 stroka.append(" " + arr[i][j] + " ");
             }
             stroka.append("} | ");
-            //System.out.println();
         }
 
         stroka.append("}");
@@ -61,17 +62,13 @@ public class MaxMin {
     public static void main(String[] args) {
         int[] arr1 = new int[]{5, 30, 1, 100, 5, 90, 45};
         String[][] arrest = {{"n", "n", "1"}, {"3", "4", "3", "4", "3", "4"}, {"3", "f", "h"}, {"a", "e", "g", "e", "h", "d", "a", "f", "d"}};
-        //System.out.println(arrest[1].length);
-        //StringBuilder s1 = new StringBuilder();
-        //System.out.println(s1.append(arr1));
 
-        //minmaxfun(arr1);
-        //ShowArray(arrest);
+        minmaxfun(arr1);
+        ShowArray(arrest);
 
-
-        /*Arrays.sort(arr1);
+        Arrays.sort(arr1);
         System.out.println("Максимальный элемент массива: "+ arr1[arr1.length-1]);
-        System.out.println("Минимальный элемент массива: " + arr1[0]);*/
+        System.out.println("Минимальный элемент массива: " + arr1[0]);
 
     }
 }
