@@ -12,14 +12,21 @@ public class Area {
         float sum=0;
         int count=0;
         int count_error=0;
+        String[] str;
+        int a=0;
+        int b=0;
+        String buffer_str;
         {
             try {
                 sc = new Scanner(f);
                 while (sc.hasNext()){
+                    buffer_str=sc.next().trim();
 //
-                    String[] str=sc.next().trim().split("[*х]");
+                        str=buffer_str.split("[*х]");
                     try {
-                        sum+=(Float.parseFloat(str[0])/1000)*(Float.parseFloat(str[1])/1000);
+                        a=Integer.valueOf(str[0].trim());
+                        b=Integer.valueOf(str[1].trim());
+                        sum+=((a/1000f)*(b/1000f));
                         System.out.println(Arrays.toString(str));
                         count++;
                     }
